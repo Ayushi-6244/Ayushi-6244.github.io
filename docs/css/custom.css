@@ -69,3 +69,62 @@
 #sideNav .navbar-nav .nav-link:hover {
   color: var(--bs-orange);
 }
+/* Overlay menu style */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.95);
+  overflow-y: hidden;
+  transition: height 0.5s ease;
+}
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overlay-content a {
+  display: block;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+.overlay-content a:hover {
+  color: var(--bs-primary);
+}
+
+/* Hamburger and close icons */
+.menu-btn, .menu-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  z-index: 10000;
+  color: var(--bs-primary);
+}
+.menu-close {
+  display: none;
+  color: #fff;
+}
+
+/* Contact list styling */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.contact-list i {
+  margin-right: 0.5rem;
+  color: var(--bs-primary);
+}
