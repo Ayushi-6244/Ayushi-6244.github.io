@@ -1,10 +1,7 @@
 /*
   Ayushi Sisodia Portfolio
-  A modern portfolio theme inspired by the Solid State template from HTML5 UP.
-
-  This stylesheet defines a dark, data‑centric aesthetic with clean typography
-  and subtle accent colors. Sections are clearly delineated and responsive
-  thanks to flexible layouts and CSS variables.
+  Modern dark portfolio theme inspired by HTML5 UP Solid State.
+  Updated for a cleaner, more premium look (nav glass, pill buttons, chip tags, card hover).
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap');
@@ -14,25 +11,40 @@
     --bg-primary: #2e3141;
     --bg-secondary: #3a3d56;
     --bg-alt: #404469;
-    /* Text and accent colors */
+
+    /* Text */
     --text-primary: #ffffff;
-    --accent: #c78564; /* warm, earthy accent reminiscent of the original template */
+    --text-muted: rgba(255, 255, 255, 0.78);
+
+    /* Accent */
+    --accent: #c78564;
     --accent-hover: #e9a77d;
+
+    /* UI */
+    --border: rgba(255, 255, 255, 0.12);
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.22);
+    --shadow-md: 0 12px 34px rgba(0, 0, 0, 0.30);
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+
     /* Typography */
     --font-heading: 'Raleway', Helvetica, Arial, sans-serif;
     --font-body: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
     font-family: var(--font-body);
     color: var(--text-primary);
     background-color: var(--bg-primary);
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
 }
 
 h1, h2, h3, h4 {
@@ -41,11 +53,17 @@ h1, h2, h3, h4 {
     color: var(--text-primary);
 }
 
+p {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    margin-top: 0;
+}
+
 a {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px dotted var(--accent);
-    transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 a:hover {
@@ -53,32 +71,36 @@ a:hover {
     color: var(--accent-hover);
 }
 
-/* Navigation */
+/* Navigation (glassy floating pill) */
 nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    background: var(--bg-secondary);
-    padding: 12px 24px;
+    top: 14px;
+    right: 14px;
+    background: rgba(58, 61, 86, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 18px;
     z-index: 100;
-    border-radius: 0 0 0 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
 }
 
 nav a {
-    margin-left: 16px;
-    font-size: 0.85rem;
+    margin-left: 14px;
+    font-size: 0.82rem;
     text-transform: uppercase;
     font-weight: 700;
     color: var(--text-primary);
     border-bottom: none;
+    opacity: 0.9;
 }
 
-nav a:first-child {
-    margin-left: 0;
-}
+nav a:first-child { margin-left: 0; }
 
 nav a:hover {
     color: var(--accent-hover);
+    opacity: 1;
 }
 
 /* General section styling */
@@ -89,10 +111,10 @@ section {
 
 /* Hero */
 .hero {
-    background-image: linear-gradient(rgba(46,49,65,0.8), rgba(46,49,65,0.8)), url('images/hero.png');
+    background-image: linear-gradient(rgba(46,49,65,0.82), rgba(46,49,65,0.82)), url('../images/hero.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,33 +124,39 @@ section {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.4px;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 800px;
-    margin: 0 auto 1.5rem;
+    font-size: 1.15rem;
+    max-width: 920px;
+    margin: 0 auto 1.4rem;
+    color: rgba(255,255,255,0.86);
 }
 
-/* Buttons */
+/* Buttons (pill + lift) */
 .btn {
     display: inline-block;
     background: var(--accent);
-    color: var(--bg-primary);
-    padding: 10px 28px;
-    border-radius: 5px;
-    font-weight: bold;
+    color: #1f2230;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    margin-top: 20px;
-    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-size: 0.78rem;
+    margin-top: 16px;
+    border: 1px solid rgba(0,0,0,0.12);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
 .btn:hover {
     background: var(--accent-hover);
-    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: #1f2230;
 }
 
 /* About Section */
@@ -146,11 +174,12 @@ section {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
 }
 
 .about .content {
-    max-width: 600px;
+    max-width: 640px;
 }
 
 /* Section titles */
@@ -166,28 +195,37 @@ section {
 }
 
 .experience-item {
-    margin-bottom: 40px;
+    margin: 0 auto 42px;
+    max-width: 980px;
+    padding: 22px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: rgba(46, 49, 65, 0.35);
+    box-shadow: var(--shadow-sm);
 }
 
 .experience-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     color: var(--accent);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.25rem;
 }
 
 .experience-item span {
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 0.92rem;
+    font-weight: 700;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    color: rgba(255,255,255,0.88);
 }
 
 .experience-item ul {
-    padding-left: 20px;
+    padding-left: 18px;
+    margin: 0;
 }
 
 .experience-item ul li {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.86);
 }
 
 /* Projects */
@@ -198,23 +236,31 @@ section {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 28px;
     margin-top: 40px;
 }
 
 .project-card {
-    background: var(--bg-primary);
-    border-radius: 8px;
+    background: rgba(46,49,65,0.88);
+    border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .project-card img {
     width: 100%;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
 }
 
 .project-card .card-content {
@@ -224,7 +270,7 @@ section {
 
 .project-card h3 {
     margin-top: 0;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: var(--accent);
 }
 
@@ -234,7 +280,26 @@ section {
 
 .project-card a.btn {
     align-self: flex-start;
-    margin-top: 15px;
+    margin-top: 14px;
+}
+
+/* Tech list chips */
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-list li {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.88);
 }
 
 /* Contact */
@@ -247,17 +312,35 @@ section {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 520px;
 }
 
 .contact li {
-    margin: 8px 0;
+    margin: 10px 0;
     font-size: 1rem;
+    color: rgba(255,255,255,0.88);
 }
 
 footer {
     background: var(--bg-secondary);
     text-align: center;
     padding: 20px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+}
+
+/* Responsive tweaks */
+@media (max-width: 560px) {
+    nav {
+        left: 14px;
+        right: 14px;
+        text-align: center;
+    }
+    nav a {
+        display: inline-block;
+        margin: 6px 10px;
+    }
+    section {
+        padding: 70px 18px;
+    }
 }
