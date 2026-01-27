@@ -1,130 +1,346 @@
-/* Custom styling and animations for the Ayushi Sisodia portfolio */
+/*
+  Ayushi Sisodia Portfolio
+  Modern dark portfolio theme inspired by HTML5 UP Solid State.
+  Updated for a cleaner, more premium look (nav glass, pill buttons, chip tags, card hover).
+*/
 
-/* Fade/slide reveal animation for sections */
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Source+Sans+Pro:wght@300;600&display=swap');
 
-/* Timeline styling for Experience section */
-.timeline {
-  position: relative;
-  margin-left: 1rem;
-  padding-left: 1rem;
-  border-left: 2px solid var(--bs-primary);
-}
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
-}
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -0.75rem;
-  top: 0.5rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  background: var(--bs-primary);
-  border-radius: 50%;
-}
+:root {
+    /* Background colors */
+    --bg-primary: #2e3141;
+    --bg-secondary: #3a3d56;
+    --bg-alt: #404469;
 
-/* Skill bars */
-.skill-bars {
-  margin-top: 1rem;
-}
-.skill-bar {
-  margin-bottom: 1rem;
-}
-.skill-bar .skill-name {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  display: block;
-}
-.skill-bar .bar {
-  width: 100%;
-  height: 8px;
-  background: var(--bs-gray-300);
-  border-radius: 5px;
-  overflow: hidden;
-}
-.skill-bar .bar-fill {
-  height: 100%;
-  background: var(--bs-primary);
-  border-radius: 5px;
-  transition: width 1s ease-out;
+    /* Text */
+    --text-primary: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.78);
+
+    /* Accent */
+    --accent: #c78564;
+    --accent-hover: #e9a77d;
+
+    /* UI */
+    --border: rgba(255, 255, 255, 0.12);
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.22);
+    --shadow-md: 0 12px 34px rgba(0, 0, 0, 0.30);
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+
+    /* Typography */
+    --font-heading: 'Raleway', Helvetica, Arial, sans-serif;
+    --font-body: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-/* Alternate background colors for sections for better visual separation */
-.resume-section:nth-of-type(even) {
-  background-color: var(--bs-gray-100);
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    line-height: 1.7;
+    letter-spacing: 0.2px;
 }
 
-/* Navigation link hover effect */
-#sideNav .navbar-nav .nav-link:hover {
-  color: var(--bs-orange);
-}
-/* Overlay menu style */
-.overlay {
-  height: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.95);
-  overflow-y: hidden;
-  transition: height 0.5s ease;
-}
-.overlay-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.overlay-content a {
-  display: block;
-  margin: 20px 0;
-  font-size: 1.5rem;
-  color: #fff;
-  text-decoration: none;
-}
-.overlay-content a:hover {
-  color: var(--bs-primary);
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+    color: var(--text-primary);
 }
 
-/* Hamburger and close icons */
-.menu-btn, .menu-close {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
-  background: transparent;
-  border: none;
-  z-index: 10000;
-  color: var(--bs-primary);
-}
-.menu-close {
-  display: none;
-  color: #fff;
+p {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    margin-top: 0;
 }
 
-/* Contact list styling */
-.contact-list {
-  list-style: none;
-  padding: 0;
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent);
+    transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-.contact-list li {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+
+a:hover {
+    border-bottom-color: transparent;
+    color: var(--accent-hover);
 }
-.contact-list i {
-  margin-right: 0.5rem;
-  color: var(--bs-primary);
+
+/* Navigation (glassy floating pill) */
+nav {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    background: rgba(58, 61, 86, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 18px;
+    z-index: 100;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+nav a {
+    margin-left: 14px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-bottom: none;
+    opacity: 0.9;
+}
+
+nav a:first-child { margin-left: 0; }
+
+nav a:hover {
+    color: var(--accent-hover);
+    opacity: 1;
+}
+
+/* General section styling */
+section {
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* Hero */
+.hero {
+    background-image: linear-gradient(rgba(46,49,65,0.82), rgba(46,49,65,0.82)), url('images/hero.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.4px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 920px;
+    margin: 0 auto 1.4rem;
+    color: rgba(255,255,255,0.86);
+}
+
+/* Buttons (pill + lift) */
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #1f2230;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    margin-top: 16px;
+    border: 1px solid rgba(0,0,0,0.12);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: #1f2230;
+}
+
+/* About Section */
+.about {
+    background: var(--bg-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.about .content {
+    max-width: 640px;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Experience */
+.experience {
+    background: var(--bg-alt);
+}
+
+.experience-item {
+    margin: 0 auto 42px;
+    max-width: 980px;
+    padding: 22px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: rgba(46, 49, 65, 0.35);
+    box-shadow: var(--shadow-sm);
+}
+
+.experience-item h3 {
+    font-size: 1.35rem;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+}
+
+.experience-item span {
+    font-size: 0.92rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.7rem;
+    color: rgba(255,255,255,0.88);
+}
+
+.experience-item ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.experience-item ul li {
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.86);
+}
+
+/* Projects */
+.projects {
+    background: var(--bg-secondary);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: rgba(46,49,65,0.88);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.project-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
+}
+
+.project-card .card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.project-card p {
+    flex-grow: 1;
+}
+
+.project-card a.btn {
+    align-self: flex-start;
+    margin-top: 14px;
+}
+
+/* Tech list chips */
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-list li {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.88);
+}
+
+/* Contact */
+.contact {
+    background: var(--bg-primary);
+    text-align: center;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 520px;
+}
+
+.contact li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.88);
+}
+
+footer {
+    background: var(--bg-secondary);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+}
+
+/* Responsive tweaks */
+@media (max-width: 560px) {
+    nav {
+        left: 14px;
+        right: 14px;
+        text-align: center;
+    }
+    nav a {
+        display: inline-block;
+        margin: 6px 10px;
+    }
+    section {
+        padding: 70px 18px;
+    }
 }
