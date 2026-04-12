@@ -7,38 +7,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <div id="cur-dot"></div>
-  <div id="cur-ring"></div>
-
-  <nav>
+  <div id="cur-dot"></div><div id="cur-ring"></div>
+  <nav id="nav">
     <a href="index.html" class="nav-logo">Ayushi Sisodia</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="about.html">About</a></li>
       <li><a href="exp.html">Experience</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- Page hero -->
   <div class="page-hero">
-    <p class="label reveal">Career</p>
-    <h1 class="page-hero-h reveal" style="transition-delay:.1s">
-      Professional<br><em>Experience</em>
-    </h1>
-    <p class="page-hero-sub reveal" style="transition-delay:.2s">
-      Roles where data met real-world impact — from HR analytics to academic engagement strategy.
-    </p>
+    <p class="label reveal">// Career</p>
+    <h1 class="page-hero-h reveal" style="transition-delay:.1s">Professional<br><em>Experience</em></h1>
+    <p class="page-hero-sub reveal" style="transition-delay:.2s">Roles where data met real-world impact — from HR analytics at The Home Depot to engagement strategy at Saint Peter's University.</p>
   </div>
+  <div class="glow-line"></div>
 
-  <!-- Timeline -->
-  <section class="exp-section" style="background:var(--cream)">
+  <section class="exp-section">
     <div class="exp-inner">
       <div class="timeline">
-
         <div class="tl-item">
           <div class="tl-date">Jan 2025<br>– Present</div>
           <div>
@@ -48,92 +39,77 @@
               <li>Analysed student engagement workflows and defined KPIs across awareness → sign-up → attendance; increased recurring attendance by 20% and improved event schedule adoption by 25% vs the previous term.</li>
               <li>Built and maintained Tableau dashboards using SQL-based datasets to monitor participation trends and programme effectiveness, enabling data-driven planning and outreach decisions.</li>
               <li>Standardised data workflows by cleaning, validating, and consolidating multiple data sources; improved reporting accuracy and streamlined recurring reporting cycles.</li>
-              <li>Identified engagement patterns and operational bottlenecks, recommending process improvements to strengthen execution and participation outcomes.</li>
+              <li>Identified engagement patterns and operational bottlenecks, recommending process improvements that strengthened execution and participation outcomes.</li>
             </ul>
             <div class="chips" style="margin-top:1.2rem">
-              <span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">KPI Design</span><span class="chip">Process Mapping</span>
+              <span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">KPI Design</span><span class="chip">Process Mapping</span><span class="chip">Data Cleaning</span>
             </div>
           </div>
         </div>
-
-        <div class="tl-item" style="transition-delay:.15s">
+        <div class="tl-item" style="transition-delay:.2s">
           <div class="tl-date">Mar 2023<br>– Aug 2023</div>
           <div>
             <p class="tl-role">HR Analytics Co-Op</p>
             <p class="tl-company">The Home Depot · Canada</p>
             <ul class="tl-bullets">
               <li>Built and maintained HR dashboards using Tableau and Excel to track recruitment KPIs, training completion, and employee performance trends; improved HR database accuracy by 30% through structured data cleaning and quality initiatives.</li>
-              <li>Conducted SQL-based analysis to identify inefficiencies in training completion and performance evaluation workflows and supported targeted process improvements.</li>
-              <li>Delivered workforce insights and business intelligence reports that supported attrition reduction, improved HR planning, and informed workforce strategy.</li>
+              <li>Conducted SQL-based analysis to uncover inefficiencies in training completion and performance evaluation workflows, supporting targeted process improvements.</li>
+              <li>Delivered workforce insights and BI reports that supported attrition reduction, improved HR planning, and informed workforce strategy across the organisation.</li>
               <li>Standardised reporting workflows and collaborated with HR and training teams to align analytics with company-wide data strategy and reporting standards.</li>
             </ul>
             <div class="chips" style="margin-top:1.2rem">
-              <span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">HR Analytics</span><span class="chip">People Analytics</span>
+              <span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">HR Analytics</span><span class="chip">People Analytics</span><span class="chip">Workforce Strategy</span>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Education bridge -->
-  <section class="exp-section">
+  <div class="glow-line"></div>
+
+  <section class="exp-section" style="background:var(--bg2)">
     <div class="exp-inner">
-      <p class="label reveal">Education</p>
-      <h2 class="section-h reveal" style="transition-delay:.08s">Academic background</h2>
+      <p class="label reveal">// Education</p>
+      <h2 class="section-h reveal" style="transition-delay:.08s;margin-bottom:2rem">Academic <em>background.</em></h2>
       <div class="edu-grid">
-        <div class="edu-card">
-          <p class="edu-degree">MBA — Business Analytics</p>
-          <p class="edu-school">Saint Peter's University, NJ</p>
-          <p class="edu-meta">Sep 2024 – May 2026 &nbsp;·&nbsp; GPA 3.8</p>
-        </div>
-        <div class="edu-card">
-          <p class="edu-degree">MBA — Human Resource Mgmt</p>
-          <p class="edu-school">Thompson Rivers University, Canada</p>
-          <p class="edu-meta">May 2021 – Sep 2023 &nbsp;·&nbsp; Transferred</p>
-        </div>
-        <div class="edu-card">
-          <p class="edu-degree">B.Com (Hons) — Finance</p>
-          <p class="edu-school">Mody University, India</p>
-          <p class="edu-meta">Aug 2017 – May 2020 &nbsp;·&nbsp; GPA 6.8/10</p>
-        </div>
+        <div class="edu-card"><p class="edu-degree">MBA — Business Analytics</p><p class="edu-school">Saint Peter's University, NJ</p><p class="edu-meta">Sep 2024 – May 2026 · GPA 3.8 / 4.0</p></div>
+        <div class="edu-card"><p class="edu-degree">MBA — Human Resource Mgmt</p><p class="edu-school">Thompson Rivers University, Canada</p><p class="edu-meta">May 2021 – Sep 2023 · Transferred</p></div>
+        <div class="edu-card"><p class="edu-degree">B.Com (Hons) — Finance</p><p class="edu-school">Mody University, India</p><p class="edu-meta">Aug 2017 – May 2020 · GPA 6.8 / 10.0</p></div>
       </div>
-      <a href="projects.html" class="btn reveal" style="margin-top:3rem">See My Projects →</a>
+      <a href="projects.html" class="btn btn-primary reveal" style="margin-top:3rem">See My Projects →</a>
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="contact-section" id="contact">
     <div class="contact-bg" aria-hidden="true">Hello</div>
-    <p class="label reveal">Let's Talk</p>
+    <p class="label reveal" style="justify-content:center">// Let's Talk</p>
     <h2 class="contact-h reveal" style="transition-delay:.1s">Open to new<br><em>opportunities.</em></h2>
     <p class="contact-sub reveal" style="transition-delay:.18s">Whether you're interested in collaborating or just want to connect — I'd love to hear from you.</p>
     <div class="contact-links reveal" style="transition-delay:.26s">
-      <a href="mailto:asisodia@saintpeters.edu" class="btn">✉ Email Me</a>
-      <a href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/" target="_blank" rel="noopener" class="btn outline">LinkedIn ↗</a>
-      <a href="https://github.com/Ayushi-6244" target="_blank" rel="noopener" class="btn outline">GitHub ↗</a>
+      <a href="mailto:asisodia@saintpeters.edu" class="btn btn-primary">✉ Email Me</a>
+      <a href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn ↗</a>
+      <a href="https://github.com/Ayushi-6244" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
     </div>
     <ul class="contact-details reveal" style="transition-delay:.34s">
-      <li><strong style="color:rgba(247,243,237,.7)">Location</strong> &nbsp;Jersey City, NJ (NYC Metro)</li>
-      <li><strong style="color:rgba(247,243,237,.7)">Email</strong> &nbsp;<a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
+      <li>Jersey City, NJ (NYC Metro)</li>
+      <li><a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
     </ul>
   </section>
+  <footer>© 2026 Ayushi Sisodia · Built with precision.</footer>
 
-  <footer>© 2025 Ayushi Sisodia</footer>
-
-  <script>
-  const dot=document.getElementById('cur-dot'),ring=document.getElementById('cur-ring');
-  let rx=0,ry=0,dx=0,dy=0;
-  document.addEventListener('mousemove',e=>{dx=e.clientX;dy=e.clientY;dot.style.left=dx+'px';dot.style.top=dy+'px';});
-  (function loop(){rx+=(dx-rx)*.13;ry+=(dy-ry)*.13;ring.style.left=Math.round(rx)+'px';ring.style.top=Math.round(ry)+'px';requestAnimationFrame(loop);})();
-  document.querySelectorAll('a,button,.chip,.btn,.edu-card').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-grow'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-grow'));});
-  const nav=document.querySelector('nav'),ham=document.querySelector('.nav-hamburger'),nl=document.querySelector('.nav-links');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-  ham.addEventListener('click',()=>{ham.classList.toggle('open');nl.classList.toggle('open');});
-  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');nl.classList.remove('open');}));
-  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1});
-  document.querySelectorAll('.reveal,.stagger,.tl-item,.proj-card,.proj-img-card,.edu-card').forEach(el=>io.observe(el));
-  </script>
+<script>
+const dot=document.getElementById("cur-dot"),ring=document.getElementById("cur-ring");
+let rx=0,ry=0,dx=0,dy=0;
+document.addEventListener("mousemove",e=>{dx=e.clientX;dy=e.clientY;dot.style.left=dx+"px";dot.style.top=dy+"px";});
+(function loop(){rx+=(dx-rx)*.12;ry+=(dy-ry)*.12;ring.style.left=Math.round(rx)+"px";ring.style.top=Math.round(ry)+"px";requestAnimationFrame(loop);})();
+document.querySelectorAll("a,button,.chip,.btn,.edu-card").forEach(el=>{el.addEventListener("mouseenter",()=>document.body.classList.add("cursor-grow"));el.addEventListener("mouseleave",()=>document.body.classList.remove("cursor-grow"));});
+const nav=document.getElementById("nav"),ham=document.getElementById("ham"),nl=document.getElementById("navLinks");
+window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",window.scrollY>50));
+ham.addEventListener("click",()=>{ham.classList.toggle("open");nl.classList.toggle("open");});
+nl.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{ham.classList.remove("open");nl.classList.remove("open");}));
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll(".reveal,.stagger,.tl-item,.edu-card").forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
