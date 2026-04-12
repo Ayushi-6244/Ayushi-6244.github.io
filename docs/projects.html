@@ -1,93 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Ayushi Sisodia</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation bar -->
+
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="exp.html">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="index.html" class="nav-logo">Ayushi Sisodia</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="exp.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <section class="projects">
-    <h2 class="section-title">My Projects</h2>
-    <p>End-to-end analytics projects — from data generation/cleaning to analysis and stakeholder-ready visuals.</p>
+  <!-- Page hero -->
+  <div class="page-hero">
+    <p class="label reveal">Selected Work</p>
+    <h1 class="page-hero-h reveal" style="transition-delay:.1s">
+      My<br><em>Projects</em>
+    </h1>
+    <p class="page-hero-sub reveal" style="transition-delay:.2s">
+      End-to-end analytics projects — from data generation and cleaning to analysis and stakeholder-ready visuals.
+    </p>
+  </div>
 
-    <div class="project-grid">
-      <!-- HR Metrics Analysis -->
-      <div class="project-card">
-        <img src="images/hr_analytics.png" alt="HR metrics analysis visual" />
-        <div class="card-content">
-          <h3>HR Metrics Analysis Report</h3>
-          <p>
-            <strong>Problem:</strong> Identify key drivers of attrition and training outcomes using workforce data.<br/>
-            <strong>Approach:</strong> Generated a synthetic HR dataset (~5,000 employees), defined KPIs (attrition, attendance, training completion, performance), and analyzed trends and risk patterns. Built a baseline attrition-risk model and visual summaries for reporting.<br/>
-            <strong>Output:</strong> KPI views, charts, and an HR insights report that supports workforce planning and retention analysis.
-          </p>
-          <ul class="tech-list">
-            <li>HR Analytics</li><li>People Analytics</li><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>SQL</li>
-          </ul>
-          <a href="https://github.com/Ayushi-6244/HR-Metrics-Analysis" class="btn" target="_blank" rel="noopener">GitHub Repository</a>
-        </div>
-      </div>
+  <section class="projects-section">
+    <div class="proj-inner">
+      <p class="proj-intro reveal">Every dataset holds a unique story — join me in uncovering mine and witness the art of bringing data to life.</p>
 
-      <!-- Sales Performance Dashboard -->
-      <div class="project-card">
-        <img src="images/sales_dashboard.png" alt="Sales performance dashboard visual" />
-        <div class="card-content">
-          <h3>Sales Performance Dashboard</h3>
-          <p>
-            <strong>Problem:</strong> Understand revenue leakage and performance drivers across regions and product SKUs.<br/>
-            <strong>Approach:</strong> Analyzed ~10,000 transactions across four regions to identify discounting patterns, low-margin SKUs, and seasonality. Designed KPI views and a dashboard for quick performance monitoring.<br/>
-            <strong>Output:</strong> An interactive dashboard and insights highlighting where margin and revenue improvements are most likely.
-          </p>
-          <ul class="tech-list">
-            <li>Dashboarding</li><li>Revenue Analysis</li><li>Python</li><li>SQL</li><li>Tableau / Power BI</li><li>SQLite</li>
-          </ul>
-          <a href="https://github.com/Ayushi-6244/Sales-Performance-Dashboard" class="btn" target="_blank" rel="noopener">GitHub Repository</a>
-        </div>
-      </div>
+      <!-- Image card grid -->
+      <div class="proj-grid">
 
-      <!-- Event Analytics & Process Optimization -->
-      <div class="project-card">
-        <img src="images/avatar.png" alt="Event analytics and process optimization visual" />
-        <div class="card-content">
-          <h3>Event Analytics &amp; Process Optimization</h3>
-          <p>
-            <strong>Problem:</strong> Improve operational execution and engagement outcomes for recurring events.<br/>
-            <strong>Approach:</strong> Analyzed attendance and feedback data to identify engagement bottlenecks, capacity constraints, and process gaps. Tracked utilization and satisfaction trends and compared before/after changes to evaluate improvements.<br/>
-            <strong>Output:</strong> An operational KPI report with recommendations to improve throughput, planning, and participation outcomes.
-          </p>
-          <ul class="tech-list">
-            <li>Operations Analytics</li><li>Process Optimization</li><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Process Mapping</li>
-          </ul>
-          <a href="https://github.com/Ayushi-6244/Event-Analytics-Optimization" class="btn" target="_blank" rel="noopener">GitHub Repository</a>
-        </div>
+        <a href="https://github.com/Ayushi-6244/HR-Metrics-Analysis" target="_blank" rel="noopener" class="proj-img-card">
+          <img class="card-img" src="images/hr_analytics.png" alt="HR metrics analysis">
+          <div class="card-body">
+            <p class="proj-tag" style="font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem">HR Analytics · People Analytics</p>
+            <h3>HR Metrics Analysis Report</h3>
+            <p><strong style="color:var(--ink)">Problem:</strong> Identify key drivers of attrition and training outcomes using workforce data.</p>
+            <p><strong style="color:var(--ink)">Approach:</strong> Generated a synthetic HR dataset (~5,000 employees), defined KPIs (attrition, attendance, training completion, performance), and analysed trends and risk patterns. Built a baseline attrition-risk model and visual summaries for reporting.</p>
+            <p><strong style="color:var(--ink)">Output:</strong> KPI views, charts, and an HR insights report that supports workforce planning and retention analysis.</p>
+            <ul class="tech-list">
+              <li>HR Analytics</li><li>People Analytics</li><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>SQL</li>
+            </ul>
+            <span class="btn" style="margin-top:.5rem;font-size:.7rem;padding:.6rem 1.2rem">View on GitHub ↗</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ayushi-6244/Sales-Performance-Dashboard" target="_blank" rel="noopener" class="proj-img-card" style="transition-delay:.12s">
+          <img class="card-img" src="images/sales_dashboard.png" alt="Sales performance dashboard">
+          <div class="card-body">
+            <p class="proj-tag" style="font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem">Revenue Analysis · Dashboarding</p>
+            <h3>Sales Performance Dashboard</h3>
+            <p><strong style="color:var(--ink)">Problem:</strong> Understand revenue leakage and performance drivers across regions and product SKUs.</p>
+            <p><strong style="color:var(--ink)">Approach:</strong> Analysed ~10,000 transactions across four regions to identify discounting patterns, low-margin SKUs, and seasonality. Designed KPI views and a dashboard for quick performance monitoring.</p>
+            <p><strong style="color:var(--ink)">Output:</strong> An interactive dashboard and insights highlighting where margin and revenue improvements are most likely.</p>
+            <ul class="tech-list">
+              <li>Dashboarding</li><li>Revenue Analysis</li><li>Python</li><li>SQL</li><li>Tableau / Power BI</li><li>SQLite</li>
+            </ul>
+            <span class="btn" style="margin-top:.5rem;font-size:.7rem;padding:.6rem 1.2rem">View on GitHub ↗</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ayushi-6244/Event-Analytics-Optimization" target="_blank" rel="noopener" class="proj-img-card" style="transition-delay:.24s">
+          <img class="card-img" src="images/avatar.png" alt="Event analytics and process optimisation">
+          <div class="card-body">
+            <p class="proj-tag" style="font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem">Operations Analytics · Process Optimisation</p>
+            <h3>Event Analytics &amp; Process Optimisation</h3>
+            <p><strong style="color:var(--ink)">Problem:</strong> Improve operational execution and engagement outcomes for recurring events.</p>
+            <p><strong style="color:var(--ink)">Approach:</strong> Analysed attendance and feedback data to identify engagement bottlenecks, capacity constraints, and process gaps. Tracked utilisation and satisfaction trends and compared before/after changes to evaluate improvements.</p>
+            <p><strong style="color:var(--ink)">Output:</strong> An operational KPI report with recommendations to improve throughput, planning, and participation outcomes.</p>
+            <ul class="tech-list">
+              <li>Operations Analytics</li><li>Process Optimisation</li><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Process Mapping</li>
+            </ul>
+            <span class="btn" style="margin-top:.5rem;font-size:.7rem;padding:.6rem 1.2rem">View on GitHub ↗</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <p>If you’re interested in any of these projects or would like to collaborate, please reach out!</p>
-    <ul>
-      <li><strong>Location:</strong> Jersey City, NJ (NYC Metro)</li>
-      <li><strong>Email:</strong> <a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
-      <li><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/">LinkedIn</a></li>
-      <li><strong>GitHub:</strong> <a target="_blank" rel="noopener" href="https://github.com/Ayushi-6244">github.com/Ayushi-6244</a></li>
+  <!-- Contact -->
+  <section class="contact-section" id="contact">
+    <div class="contact-bg" aria-hidden="true">Hello</div>
+    <p class="label reveal">Let's Talk</p>
+    <h2 class="contact-h reveal" style="transition-delay:.1s">Interested in<br><em>collaborating?</em></h2>
+    <p class="contact-sub reveal" style="transition-delay:.18s">If you'd like to discuss any of these projects or explore working together, I'd love to hear from you.</p>
+    <div class="contact-links reveal" style="transition-delay:.26s">
+      <a href="mailto:asisodia@saintpeters.edu" class="btn">✉ Email Me</a>
+      <a href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/" target="_blank" rel="noopener" class="btn outline">LinkedIn ↗</a>
+      <a href="https://github.com/Ayushi-6244" target="_blank" rel="noopener" class="btn outline">GitHub ↗</a>
+    </div>
+    <ul class="contact-details reveal" style="transition-delay:.34s">
+      <li><strong style="color:rgba(247,243,237,.7)">Location</strong> &nbsp;Jersey City, NJ (NYC Metro)</li>
+      <li><strong style="color:rgba(247,243,237,.7)">Email</strong> &nbsp;<a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
     </ul>
   </section>
 
-  <footer>
-    © 2025 Ayushi Sisodia. Design inspired by HTML5 UP Solid State.
-  </footer>
+  <footer>© 2025 Ayushi Sisodia</footer>
+
+  <script>
+  const dot=document.getElementById('cur-dot'),ring=document.getElementById('cur-ring');
+  let rx=0,ry=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{dx=e.clientX;dy=e.clientY;dot.style.left=dx+'px';dot.style.top=dy+'px';});
+  (function loop(){rx+=(dx-rx)*.13;ry+=(dy-ry)*.13;ring.style.left=Math.round(rx)+'px';ring.style.top=Math.round(ry)+'px';requestAnimationFrame(loop);})();
+  document.querySelectorAll('a,button,.chip,.btn,.proj-img-card').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-grow'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-grow'));});
+  const nav=document.querySelector('nav'),ham=document.querySelector('.nav-hamburger'),nl=document.querySelector('.nav-links');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  ham.addEventListener('click',()=>{ham.classList.toggle('open');nl.classList.toggle('open');});
+  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');nl.classList.remove('open');}));
+  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.08});
+  document.querySelectorAll('.reveal,.stagger,.tl-item,.proj-card,.proj-img-card,.edu-card').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
