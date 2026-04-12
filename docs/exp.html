@@ -3,78 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience — Ayushi&nbsp;Sisodia</title>
+  <title>Experience — Ayushi Sisodia</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation bar -->
+
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="exp.html">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="index.html" class="nav-logo">Ayushi Sisodia</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="exp.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <section class="experience">
-    <h2 class="section-title">Professional Experience</h2>
+  <!-- Page hero -->
+  <div class="page-hero">
+    <p class="label reveal">Career</p>
+    <h1 class="page-hero-h reveal" style="transition-delay:.1s">
+      Professional<br><em>Experience</em>
+    </h1>
+    <p class="page-hero-sub reveal" style="transition-delay:.2s">
+      Roles where data met real-world impact — from HR analytics to academic engagement strategy.
+    </p>
+  </div>
 
-    <div class="experience-item">
-      <h3>Technical Program Assistant</h3>
-      <span>Saint&nbsp;Peter’s University, New Jersey — Jan&nbsp;2025 – Present</span>
-      <ul>
-        <li>Analyzed student engagement workflows and defined KPIs across awareness → sign-up → attendance; increased recurring attendance by&nbsp;20% and improved event schedule adoption by&nbsp;25% compared to the previous term.</li>
-        <li>Built and maintained Tableau dashboards using SQL-based datasets to monitor participation trends and program effectiveness, enabling data-driven planning and outreach decisions.</li>
-        <li>Standardized data workflows by cleaning, validating, and consolidating multiple data sources; improved reporting accuracy and streamlined recurring reporting.</li>
-        <li>Identified engagement patterns and operational bottlenecks, recommending process improvements to strengthen execution and participation outcomes.</li>
-      </ul>
-    </div>
+  <!-- Timeline -->
+  <section class="exp-section" style="background:var(--cream)">
+    <div class="exp-inner">
+      <div class="timeline">
 
-    <div class="experience-item">
-      <h3>HR Analytics Co-Op</h3>
-      <span>The&nbsp;Home&nbsp;Depot, Canada — Mar&nbsp;2023 – Aug&nbsp;2023</span>
-      <ul>
-        <li>Built and maintained HR dashboards using Tableau and Excel to track recruitment KPIs, training completion, and employee performance trends; improved HR database accuracy by&nbsp;30% through structured data cleaning and quality initiatives.</li>
-        <li>Conducted SQL-based analysis to identify inefficiencies in training completion and performance evaluation workflows and supported targeted process improvements.</li>
-        <li>Delivered workforce insights and business intelligence reports that supported attrition reduction, improved HR planning, and informed workforce strategy.</li>
-        <li>Standardized reporting workflows and collaborated with HR and training teams to align analytics with company-wide data strategy and reporting standards.</li>
-      </ul>
+        <div class="tl-item">
+          <div class="tl-date">Jan 2025<br>– Present</div>
+          <div>
+            <p class="tl-role">Technical Program Assistant</p>
+            <p class="tl-company">Saint Peter's University · New Jersey, USA</p>
+            <ul class="tl-bullets">
+              <li>Analysed student engagement workflows and defined KPIs across awareness → sign-up → attendance; increased recurring attendance by 20% and improved event schedule adoption by 25% vs the previous term.</li>
+              <li>Built and maintained Tableau dashboards using SQL-based datasets to monitor participation trends and programme effectiveness, enabling data-driven planning and outreach decisions.</li>
+              <li>Standardised data workflows by cleaning, validating, and consolidating multiple data sources; improved reporting accuracy and streamlined recurring reporting cycles.</li>
+              <li>Identified engagement patterns and operational bottlenecks, recommending process improvements to strengthen execution and participation outcomes.</li>
+            </ul>
+            <div class="chips" style="margin-top:1.2rem">
+              <span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">KPI Design</span><span class="chip">Process Mapping</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" style="transition-delay:.15s">
+          <div class="tl-date">Mar 2023<br>– Aug 2023</div>
+          <div>
+            <p class="tl-role">HR Analytics Co-Op</p>
+            <p class="tl-company">The Home Depot · Canada</p>
+            <ul class="tl-bullets">
+              <li>Built and maintained HR dashboards using Tableau and Excel to track recruitment KPIs, training completion, and employee performance trends; improved HR database accuracy by 30% through structured data cleaning and quality initiatives.</li>
+              <li>Conducted SQL-based analysis to identify inefficiencies in training completion and performance evaluation workflows and supported targeted process improvements.</li>
+              <li>Delivered workforce insights and business intelligence reports that supported attrition reduction, improved HR planning, and informed workforce strategy.</li>
+              <li>Standardised reporting workflows and collaborated with HR and training teams to align analytics with company-wide data strategy and reporting standards.</li>
+            </ul>
+            <div class="chips" style="margin-top:1.2rem">
+              <span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">HR Analytics</span><span class="chip">People Analytics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section class="projects">
-    <div class="project-grid">
-      <div class="project-card">
-        <div class="card-content">
-          <h3>Explore My Projects</h3>
-          <p>See the dashboards and analyses I've created to solve real-world problems.</p>
-          <a href="projects.html" class="btn">View Projects</a>
+  <!-- Education bridge -->
+  <section class="exp-section">
+    <div class="exp-inner">
+      <p class="label reveal">Education</p>
+      <h2 class="section-h reveal" style="transition-delay:.08s">Academic background</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <p class="edu-degree">MBA — Business Analytics</p>
+          <p class="edu-school">Saint Peter's University, NJ</p>
+          <p class="edu-meta">Sep 2024 – May 2026 &nbsp;·&nbsp; GPA 3.8</p>
+        </div>
+        <div class="edu-card">
+          <p class="edu-degree">MBA — Human Resource Mgmt</p>
+          <p class="edu-school">Thompson Rivers University, Canada</p>
+          <p class="edu-meta">May 2021 – Sep 2023 &nbsp;·&nbsp; Transferred</p>
+        </div>
+        <div class="edu-card">
+          <p class="edu-degree">B.Com (Hons) — Finance</p>
+          <p class="edu-school">Mody University, India</p>
+          <p class="edu-meta">Aug 2017 – May 2020 &nbsp;·&nbsp; GPA 6.8/10</p>
         </div>
       </div>
-      <div class="project-card">
-        <div class="card-content">
-          <h3>Return Home</h3>
-          <p>Head back to the main page to learn more about my background and skills.</p>
-          <a href="index.html" class="btn">Home Page</a>
-        </div>
-      </div>
+      <a href="projects.html" class="btn reveal" style="margin-top:3rem">See My Projects →</a>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <p>Whether you're interested in collaborating or just want to connect, I'd love to hear from you.</p>
-    <ul>
-      <li><strong>Location:</strong> Jersey City, NJ (NYC Metro)</li>
-      <li><strong>Email:</strong> <a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
-      <li><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/">LinkedIn</a></li>
-      <li><strong>GitHub:</strong> <a target="_blank" rel="noopener" href="https://github.com/Ayushi-6244">github.com/Ayushi-6244</a></li>
+  <!-- Contact -->
+  <section class="contact-section" id="contact">
+    <div class="contact-bg" aria-hidden="true">Hello</div>
+    <p class="label reveal">Let's Talk</p>
+    <h2 class="contact-h reveal" style="transition-delay:.1s">Open to new<br><em>opportunities.</em></h2>
+    <p class="contact-sub reveal" style="transition-delay:.18s">Whether you're interested in collaborating or just want to connect — I'd love to hear from you.</p>
+    <div class="contact-links reveal" style="transition-delay:.26s">
+      <a href="mailto:asisodia@saintpeters.edu" class="btn">✉ Email Me</a>
+      <a href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/" target="_blank" rel="noopener" class="btn outline">LinkedIn ↗</a>
+      <a href="https://github.com/Ayushi-6244" target="_blank" rel="noopener" class="btn outline">GitHub ↗</a>
+    </div>
+    <ul class="contact-details reveal" style="transition-delay:.34s">
+      <li><strong style="color:rgba(247,243,237,.7)">Location</strong> &nbsp;Jersey City, NJ (NYC Metro)</li>
+      <li><strong style="color:rgba(247,243,237,.7)">Email</strong> &nbsp;<a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
     </ul>
   </section>
 
-  <footer>
-    © 2025 Ayushi Sisodia. Design inspired by HTML5 UP Solid State.
-  </footer>
+  <footer>© 2025 Ayushi Sisodia</footer>
+
+  <script>
+  const dot=document.getElementById('cur-dot'),ring=document.getElementById('cur-ring');
+  let rx=0,ry=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{dx=e.clientX;dy=e.clientY;dot.style.left=dx+'px';dot.style.top=dy+'px';});
+  (function loop(){rx+=(dx-rx)*.13;ry+=(dy-ry)*.13;ring.style.left=Math.round(rx)+'px';ring.style.top=Math.round(ry)+'px';requestAnimationFrame(loop);})();
+  document.querySelectorAll('a,button,.chip,.btn,.edu-card').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-grow'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-grow'));});
+  const nav=document.querySelector('nav'),ham=document.querySelector('.nav-hamburger'),nl=document.querySelector('.nav-links');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  ham.addEventListener('click',()=>{ham.classList.toggle('open');nl.classList.toggle('open');});
+  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');nl.classList.remove('open');}));
+  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal,.stagger,.tl-item,.proj-card,.proj-img-card,.edu-card').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
