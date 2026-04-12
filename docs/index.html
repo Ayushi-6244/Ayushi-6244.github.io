@@ -3,120 +3,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayushi Sisodia — Business & Data Analyst</title>
-  <!-- Link to the custom stylesheet -->
+  <title>Ayushi Sisodia — Business &amp; Data Analyst</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation bar -->
+
+  <!-- Cursor -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- ── Nav ── -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html" class="nav-logo">Ayushi Sisodia</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="exp.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- ── Hero ── -->
   <section class="hero">
-    <h1>Hi, I'm Ayushi&nbsp;Sisodia</h1>
-    <p>Early-career Business &amp; Data Analyst specializing in turning complex data into actionable insights using SQL, Excel, Tableau, Power&nbsp;BI, and Python.</p>
-    <a href="#projects" class="btn">View My Work</a>
-    <a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener" class="btn">Download Resume</a>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <img src="images/Ayushi.png" alt="Abstract avatar representing Ayushi">
-    <div class="content">
-      <h2 class="section-title">More About Me!</h2>
-      <p>Detail-oriented and results-driven analyst and MBA candidate with a strong foundation in data analytics, business process improvement and stakeholder collaboration. Skilled in SQL, Excel, Tableau, Python, R and Power&nbsp;BI; experienced in data cleaning and transformation, KPI tracking, dashboarding, and insight storytelling. Proven ability to analyze complex datasets, automate reporting, and deliver actionable insights across HR, academic, and business domains.</p>
-      <a href="about.html" class="btn">Learn More</a>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="experience">
-    <h2 class="section-title">Experience</h2>
-    <div class="experience-item">
-      <h3>Technical Program Assistant</h3>
-      <span>Saint&nbsp;Peter’s University, New Jersey — Jan 2025 – Present</span>
-      <ul>
-        <li>Analyzed engagement workflows and built KPI dashboards (awareness → sign-up → attendance) using SQL and Tableau; increased recurring attendance by&nbsp;20% and improved event schedule adoption by&nbsp;25%.</li>
-        <li>Managed and analyzed event data using Excel and Tableau, delivering performance dashboards and insight summaries that informed outreach strategies and programming decisions.</li>
-        <li>Standardized data workflows and improved reporting accuracy by cleaning, validating, and consolidating multiple data sources; collaborated cross-functionally to streamline processes.</li>
-        <li>Identified engagement patterns and operational bottlenecks, recommending process improvements to strengthen participation and retention.</li>
-      </ul>
-    </div>
-    <div class="experience-item">
-      <h3>HR Analytics Co-Op</h3>
-      <span>The&nbsp;Home&nbsp;Depot, Canada — Mar 2023 – Aug 2023</span>
-      <ul>
-        <li>Built and maintained HR dashboards using Tableau and Excel to track recruitment KPIs, training completion, and performance trends; improved HR database accuracy by&nbsp;30% through data cleaning and quality initiatives.</li>
-        <li>Conducted SQL-based analysis to uncover inefficiencies in training completion and performance evaluation workflows and supported targeted process improvements.</li>
-        <li>Delivered business intelligence reports and workforce insights that supported attrition reduction, improved HR planning, and informed workforce strategy.</li>
-        <li>Standardized reporting workflows and collaborated with HR and training teams to align analytics with company-wide data strategy and reporting standards.</li>
-      </ul>
-    </div>
-    <a href="exp.html" class="btn">Full Experience</a>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2 class="section-title">Projects</h2>
-    <p>Every dataset holds a unique story — join me in uncovering mine and witness the art of bringing data to life!</p>
-    <div class="project-grid">
-      <!-- HR Metrics Analysis Project -->
-      <div class="project-card">
-        <img src="images/hr_analytics.png" alt="HR metrics project illustration">
-        <div class="card-content">
-          <h3>HR Metrics Analysis Report</h3>
-          <p>Analyzed HR performance, attendance, and training datasets to assess operational efficiency. Delivered actionable insights that improved training completion rates by&nbsp;12% and built models to forecast attrition and absenteeism. Produced dashboards and reports for HR leadership using Tableau and SQL.</p>
-          <a href="https://github.com/Ayushi-6244/HR-Metrics-Analysis" class="btn" target="_blank" rel="noopener">View on GitHub</a>
-        </div>
-      </div>
-      <!-- Sales Performance Dashboard Project -->
-      <div class="project-card">
-        <img src="images/sales_dashboard.png" alt="Sales dashboard project illustration">
-        <div class="card-content">
-          <h3>Sales Performance Dashboard</h3>
-          <p>Interactive dashboard analyzing 10,000+ simulated transactions across four regions. Identified under-performing SKUs, surfaced seasonal patterns, and highlighted opportunities for revenue growth, enabling a projected 10% revenue improvement.</p>
-          <a href="https://github.com/Ayushi-6244/Sales-Performance-Dashboard" class="btn" target="_blank" rel="noopener">View on GitHub</a>
-        </div>
+    <div class="hero-left">
+      <p class="hero-eyebrow">Business &amp; Data Analyst · Jersey City, NJ</p>
+      <h1 class="hero-name">
+        Ayushi<br><em>Sisodia</em>
+      </h1>
+      <p class="hero-desc">
+        Early-career analyst specialising in turning complex data into clear, actionable insights using SQL, Excel, Tableau, Power BI and Python.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn">View My Work →</a>
+        <a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener" class="btn outline">Download Resume</a>
       </div>
     </div>
-    <a href="projects.html" class="btn">View All Projects</a>
+    <div class="hero-right">
+      <div class="hero-photo-wrap">
+        <img src="images/Ayushi.png" alt="Ayushi Sisodia">
+        <div class="hero-monogram">AS</div>
+        <span class="hero-location">MBA Candidate · GPA 3.8</span>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <div class="scroll-cue-line"></div>
+      <span>Scroll</span>
+    </div>
   </section>
 
-  <!-- Resumes Section -->
-  <section id="resumes" class="contact">
-    <h2 class="section-title">Resumes</h2>
-    <p>Role-focused resumes (same experience, different emphasis).</p>
-    <ul>
-      <li><a class="btn" href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Business Analyst (PDF)</a></li>
-      <li><a class="btn" href="images/AyushiSisodiaResumeDA.pdf" target="_blank" rel="noopener">Data Analyst (PDF)</a></li>
-      <li><a class="btn" href="images/AyushiSisodiaResumeBI.pdf" target="_blank" rel="noopener">Business Intelligence Analyst (PDF)</a></li>
-      <li><a class="btn" href="images/AyushiSisodiaResumeOpA.pdf" target="_blank" rel="noopener">Operations Analyst (PDF)</a></li>
-      <li><a class="btn" href="images/AyushiSisodiaResumeHrA.pdf" target="_blank" rel="noopener">HR Analyst (PDF)</a></li>
+  <!-- ── Marquee ── -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>SQL</span><span class="dot">·</span>
+      <span>Tableau</span><span class="dot">·</span>
+      <span>Power BI</span><span class="dot">·</span>
+      <span>Python</span><span class="dot">·</span>
+      <span>Excel</span><span class="dot">·</span>
+      <span>Data Storytelling</span><span class="dot">·</span>
+      <span>KPI Dashboards</span><span class="dot">·</span>
+      <span>Process Optimisation</span><span class="dot">·</span>
+      <span>Stakeholder Management</span><span class="dot">·</span>
+      <span>Agile</span><span class="dot">·</span>
+      <span>SQL</span><span class="dot">·</span>
+      <span>Tableau</span><span class="dot">·</span>
+      <span>Power BI</span><span class="dot">·</span>
+      <span>Python</span><span class="dot">·</span>
+      <span>Excel</span><span class="dot">·</span>
+      <span>Data Storytelling</span><span class="dot">·</span>
+      <span>KPI Dashboards</span><span class="dot">·</span>
+      <span>Process Optimisation</span><span class="dot">·</span>
+      <span>Stakeholder Management</span><span class="dot">·</span>
+      <span>Agile</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ── About (teaser) ── -->
+  <div class="about-grid">
+    <div class="about-photo reveal left">
+      <img src="images/Ayushi.png" alt="Ayushi Sisodia">
+      <div class="about-photo-badge">MBA · GPA 3.8</div>
+    </div>
+    <div class="about-text">
+      <p class="label reveal">About me</p>
+      <h2 class="section-h reveal" style="transition-delay:.1s">
+        Data-driven by nature,<br>human-centred<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic">by design.</em>
+      </h2>
+      <p class="reveal" style="transition-delay:.2s">
+        Detail-oriented analyst and MBA candidate with a strong foundation in data analytics, business process improvement and stakeholder collaboration. Skilled in SQL, Excel, Tableau, Python, R and Power BI; experienced in data cleaning, KPI tracking, dashboarding, and insight storytelling.
+      </p>
+      <p class="reveal" style="transition-delay:.28s">
+        Proven ability to analyse complex datasets, automate reporting, and deliver actionable insights across HR, academic, and business domains.
+      </p>
+      <div class="chips stagger" style="transition-delay:.35s">
+        <span class="chip">SQL</span>
+        <span class="chip">Python</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">Power BI</span>
+        <span class="chip">Excel</span>
+        <span class="chip">R</span>
+        <span class="chip">Pandas</span>
+        <span class="chip">Matplotlib</span>
+        <span class="chip">SQLite</span>
+        <span class="chip">JIRA</span>
+      </div>
+      <a href="about.html" class="btn reveal" style="transition-delay:.42s;margin-top:1.5rem">Learn More →</a>
+    </div>
+  </div>
+
+  <!-- ── Experience (teaser) ── -->
+  <section class="exp-section" id="experience">
+    <div class="exp-inner">
+      <p class="label reveal">Experience</p>
+      <h2 class="section-h reveal" style="transition-delay:.08s">Where I've worked</h2>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-date">Jan 2025 – Present</div>
+          <div>
+            <p class="tl-role">Technical Program Assistant</p>
+            <p class="tl-company">Saint Peter's University, New Jersey</p>
+            <ul class="tl-bullets">
+              <li>Analysed engagement workflows and built KPI dashboards (awareness → sign-up → attendance) using SQL and Tableau; increased recurring attendance by 20% and improved event schedule adoption by 25%.</li>
+              <li>Managed and analysed event data using Excel and Tableau, delivering performance dashboards and insight summaries that informed outreach strategies.</li>
+              <li>Standardised data workflows and improved reporting accuracy by cleaning, validating, and consolidating multiple data sources.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Mar 2023 – Aug 2023</div>
+          <div>
+            <p class="tl-role">HR Analytics Co-Op</p>
+            <p class="tl-company">The Home Depot, Canada</p>
+            <ul class="tl-bullets">
+              <li>Built HR dashboards in Tableau and Excel tracking recruitment KPIs, training completion, and performance trends; improved HR database accuracy by 30%.</li>
+              <li>Conducted SQL-based analysis to uncover inefficiencies in training and performance evaluation workflows.</li>
+              <li>Delivered workforce insights supporting attrition reduction and informing HR strategy.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <a href="exp.html" class="btn reveal" style="margin-top:2.5rem">Full Experience →</a>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section class="projects-section" id="projects">
+    <div class="proj-inner">
+      <p class="label reveal">Selected Work</p>
+      <h2 class="section-h reveal" style="transition-delay:.08s">Projects that<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic">made a difference.</em></h2>
+      <p class="proj-intro reveal" style="transition-delay:.16s">Every dataset holds a unique story — here's how I bring data to life.</p>
+
+      <div class="proj-list">
+        <div class="proj-card">
+          <div class="proj-num">01</div>
+          <div class="proj-body">
+            <p class="proj-tag">HR Analytics · People Analytics</p>
+            <p class="proj-title">HR Metrics Analysis Report</p>
+            <p class="proj-desc">Analysed HR performance, attendance, and training datasets to assess operational efficiency. Delivered actionable insights that improved training completion rates by 12% and built models to forecast attrition and absenteeism.</p>
+          </div>
+          <div class="proj-stack">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Tableau</span>
+            <a href="https://github.com/Ayushi-6244/HR-Metrics-Analysis" target="_blank" rel="noopener" class="btn" style="margin-top:.8rem;font-size:.65rem;padding:.55rem 1rem">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="proj-card" style="transition-delay:.1s">
+          <div class="proj-num">02</div>
+          <div class="proj-body">
+            <p class="proj-tag">Revenue Analysis · Dashboarding</p>
+            <p class="proj-title">Sales Performance Dashboard</p>
+            <p class="proj-desc">Interactive dashboard analysing 10,000+ simulated transactions across four regions. Identified under-performing SKUs, surfaced seasonal patterns, and highlighted opportunities enabling a projected 10% revenue improvement.</p>
+          </div>
+          <div class="proj-stack">
+            <span class="chip">Python</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">SQLite</span>
+            <a href="https://github.com/Ayushi-6244/Sales-Performance-Dashboard" target="_blank" rel="noopener" class="btn" style="margin-top:.8rem;font-size:.65rem;padding:.55rem 1rem">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="proj-card" style="transition-delay:.2s">
+          <div class="proj-num">03</div>
+          <div class="proj-body">
+            <p class="proj-tag">Operations Analytics · Process Optimisation</p>
+            <p class="proj-title">Event Analytics &amp; Process Optimisation</p>
+            <p class="proj-desc">Analysed attendance and feedback data to identify engagement bottlenecks and process gaps. Produced an operational KPI report with recommendations to improve throughput and participation outcomes.</p>
+          </div>
+          <div class="proj-stack">
+            <span class="chip">Python</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Matplotlib</span>
+            <a href="https://github.com/Ayushi-6244/Event-Analytics-Optimization" target="_blank" rel="noopener" class="btn" style="margin-top:.8rem;font-size:.65rem;padding:.55rem 1rem">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="projects.html" class="btn reveal" style="margin-top:2.5rem">View All Projects →</a>
+    </div>
+  </section>
+
+  <!-- ── Resumes ── -->
+  <section class="resumes-section" id="resumes">
+    <div class="exp-inner">
+      <p class="label reveal">Resumes</p>
+      <h2 class="section-h reveal" style="transition-delay:.08s">Role-focused CVs</h2>
+      <p class="reveal" style="transition-delay:.15s;color:var(--muted);font-size:.92rem;margin-bottom:1rem">Same experience, different emphasis — pick the version that fits the role.</p>
+      <div class="resume-grid reveal" style="transition-delay:.22s">
+        <a class="btn" href="images/AyushiSisodiaResumeBA.pdf"  target="_blank" rel="noopener">Business Analyst</a>
+        <a class="btn" href="images/AyushiSisodiaResumeDA.pdf"  target="_blank" rel="noopener">Data Analyst</a>
+        <a class="btn" href="images/AyushiSisodiaResumeBI.pdf"  target="_blank" rel="noopener">BI Analyst</a>
+        <a class="btn" href="images/AyushiSisodiaResumeOpA.pdf" target="_blank" rel="noopener">Operations Analyst</a>
+        <a class="btn" href="images/AyushiSisodiaResumeHrA.pdf" target="_blank" rel="noopener">HR Analyst</a>
+      </div>
+      <p class="reveal" style="transition-delay:.3s;color:var(--muted);font-size:.82rem;margin-top:1.2rem">Hiring for a hybrid role? Email me and I'll share the most relevant version.</p>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-bg" aria-hidden="true">Hello</div>
+    <p class="label reveal">Let's Talk</p>
+    <h2 class="contact-h reveal" style="transition-delay:.1s">Open to new<br><em>opportunities.</em></h2>
+    <p class="contact-sub reveal" style="transition-delay:.18s">Whether you're hiring or want to talk data — my inbox is always open.</p>
+    <div class="contact-links reveal" style="transition-delay:.26s">
+      <a href="mailto:asisodia@saintpeters.edu" class="btn">✉ Email Me</a>
+      <a href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/" target="_blank" rel="noopener" class="btn outline">LinkedIn ↗</a>
+      <a href="https://github.com/Ayushi-6244" target="_blank" rel="noopener" class="btn outline">GitHub ↗</a>
+    </div>
+    <ul class="contact-details reveal" style="transition-delay:.34s">
+      <li><strong style="color:rgba(247,243,237,.7)">Location</strong> &nbsp;Jersey City, NJ (NYC Metro)</li>
+      <li><strong style="color:rgba(247,243,237,.7)">Email</strong> &nbsp;<a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
     </ul>
-    <p style="margin-top: 12px;">If you’re hiring for a hybrid role, feel free to email me and I’ll share the most relevant version.</p>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <p>Let's chat about how I can help turn your data into insights.</p>
-    <ul>
-      <li><strong>Location:</strong> Jersey City, NJ (NYC Metro)</li>
-      <li><strong>Email:</strong> <a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
-      <li><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/">LinkedIn</a></li>
-      <li><strong>GitHub:</strong> <a target="_blank" rel="noopener" href="https://github.com/Ayushi-6244">github.com/Ayushi-6244</a></li>
-    </ul>
-  </section>
+  <footer>© 2025 Ayushi Sisodia</footer>
 
-  <footer>
-    © 2025 Ayushi Sisodia. Design inspired by HTML5 UP Solid State.
-  </footer>
+  <script>
+  const dot  = document.getElementById('cur-dot');
+  const ring = document.getElementById('cur-ring');
+  let rx=0,ry=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{dx=e.clientX;dy=e.clientY;dot.style.left=dx+'px';dot.style.top=dy+'px';});
+  (function loop(){rx+=(dx-rx)*.13;ry+=(dy-ry)*.13;ring.style.left=Math.round(rx)+'px';ring.style.top=Math.round(ry)+'px';requestAnimationFrame(loop);})();
+  document.querySelectorAll('a,button,.chip,.btn,.proj-card,.edu-card').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-grow'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-grow'));
+  });
+  const nav=document.querySelector('nav');
+  const ham=document.querySelector('.nav-hamburger');
+  const nl=document.querySelector('.nav-links');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  ham.addEventListener('click',()=>{ham.classList.toggle('open');nl.classList.toggle('open');});
+  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');nl.classList.remove('open');}));
+  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal,.stagger,.tl-item,.proj-card,.proj-img-card,.edu-card').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
