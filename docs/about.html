@@ -7,165 +7,120 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <div id="cur-dot"></div>
-  <div id="cur-ring"></div>
-
-  <nav>
+  <div id="cur-dot"></div><div id="cur-ring"></div>
+    <nav id="nav">
     <a href="index.html" class="nav-logo">Ayushi Sisodia</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="about.html">About</a></li>
       <li><a href="exp.html">Experience</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="images/AyushiSisodiaResumeBA.pdf" target="_blank" rel="noopener">Resume</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- Page hero -->
   <div class="page-hero">
-    <p class="label reveal">About Me</p>
-    <h1 class="page-hero-h reveal" style="transition-delay:.1s">
-      Who is<br><em>Ayushi Sisodia?</em>
-    </h1>
-    <p class="page-hero-sub reveal" style="transition-delay:.2s">
-      From numbers to narratives — a data analyst who believes every dataset has a story worth telling.
-    </p>
+    <p class="label reveal">// About Me</p>
+    <h1 class="page-hero-h reveal" style="transition-delay:.1s">Who is<br><em>Ayushi Sisodia?</em></h1>
+    <p class="page-hero-sub reveal" style="transition-delay:.2s">From numbers to narratives — a data analyst who believes every dataset has a story worth telling.</p>
   </div>
 
-  <!-- Story + photo -->
-  <div class="about-grid">
-    <div class="about-photo reveal left">
-      <img src="images/Ayushi.png" alt="Ayushi Sisodia">
-      <div class="about-photo-badge">MBA · GPA 3.8</div>
-    </div>
-    <div class="about-text">
-      <p class="label reveal">My Story</p>
-      <h2 class="section-h reveal" style="transition-delay:.1s">How it<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic">all started.</em></h2>
+  <div class="glow-line"></div>
 
-      <p class="reveal" style="transition-delay:.18s">
-        From an early fascination with numbers to a career dedicated to uncovering insights, I've worked on dashboards that support HR planning, analysed workforce and engagement trends, and presented data-driven insights to university leadership.
-      </p>
-      <p class="reveal" style="transition-delay:.24s">
-        After earning a Bachelor's degree in Finance, I discovered my passion for analytics and decided to pursue it wholeheartedly. Today, I'm deepening my expertise through an MBA in Business Analytics at Saint Peter's University (GPA 3.8/4.0).
-      </p>
-      <p class="reveal" style="transition-delay:.3s">
-        I previously completed coursework in Human Resource Management at Thompson Rivers University before transferring, inspired by hands-on analytical work during my HR Analytics Co-op at The Home Depot. I enjoy blending business context with analytical rigour to turn raw data into clear insights.
-      </p>
-      <p class="reveal" style="transition-delay:.36s">
-        If you're looking for someone who can combine analytical thinking with strong communication to bring clarity to complex data — you've found the right person!
-      </p>
-    </div>
-  </div>
-
-  <!-- Skills / toolkit -->
-  <section style="padding:0 4rem 8rem;max-width:1260px;margin:0 auto">
-    <p class="label reveal">Toolkit</p>
-    <h2 class="section-h reveal" style="transition-delay:.08s;margin-bottom:2rem">Tools that help me<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic">transform ideas into insight.</em></h2>
-    <div class="chips stagger">
-      <span class="chip">SQL</span>
-      <span class="chip">Python</span>
-      <span class="chip">R</span>
-      <span class="chip">Pandas</span>
-      <span class="chip">Matplotlib</span>
-      <span class="chip">Tableau</span>
-      <span class="chip">Power BI</span>
-      <span class="chip">Excel</span>
-      <span class="chip">SQLite</span>
-      <span class="chip">JIRA</span>
-      <span class="chip">Confluence</span>
-      <span class="chip">Process Mapping</span>
-      <span class="chip">KPI Design</span>
-      <span class="chip">Dashboarding</span>
-      <span class="chip">Agile / Scrum</span>
-      <span class="chip">Data Storytelling</span>
-      <span class="chip">Stakeholder Mgmt</span>
-      <span class="chip">A/B Testing</span>
-    </div>
-
-    <!-- What defines me -->
-    <p class="label reveal" style="margin-top:5rem">What defines me</p>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <p style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem">01</p>
-        <p class="edu-degree">Data-First Thinking</p>
-        <p class="edu-meta" style="color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.5rem">Every decision I make is grounded in evidence. I ask "what does the data say?" before anything else.</p>
+  <section class="about-section">
+    <div class="about-inner">
+      <div class="about-visual reveal left">
+        <div class="about-accent"></div>
+        <div class="about-img-frame">
+          <img src="images/Ayushi.png" alt="Ayushi Sisodia">
+        </div>
+        <div class="about-badge"><strong>3.8</strong>MBA GPA · Saint Peter's</div>
       </div>
-      <div class="edu-card">
-        <p style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem">02</p>
-        <p class="edu-degree">Clear Communication</p>
-        <p class="edu-meta" style="color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.5rem">I translate complex analyses into plain language that resonates with both technical teams and business leaders.</p>
-      </div>
-      <div class="edu-card">
-        <p style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem">03</p>
-        <p class="edu-degree">Lifelong Learner</p>
-        <p class="edu-meta" style="color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.5rem">From self-teaching Python to pursuing an MBA, I'm always expanding my knowledge and adapting to new challenges.</p>
-      </div>
-      <div class="edu-card">
-        <p style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem">04</p>
-        <p class="edu-degree">Diverse Background</p>
-        <p class="edu-meta" style="color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.5rem">Finance roots, HR analytics exposure, and business strategy studies give me a uniquely cross-functional perspective.</p>
+      <div class="about-copy">
+        <p class="label reveal">// My Story</p>
+        <h2 class="section-h reveal" style="transition-delay:.1s;margin-bottom:1.5rem">How it <em>all started.</em></h2>
+        <p class="reveal" style="transition-delay:.18s">From an early fascination with numbers to a career dedicated to uncovering insights — I've worked on dashboards that support HR planning, analysed workforce and engagement trends, and presented data-driven insights to university leadership.</p>
+        <p class="reveal" style="transition-delay:.24s">After earning a Bachelor's degree in Finance, I discovered my passion for analytics and decided to pursue it wholeheartedly. Today, I'm deepening my expertise through an MBA in Business Analytics at Saint Peter's University (GPA 3.8/4.0).</p>
+        <p class="reveal" style="transition-delay:.3s">I previously completed coursework in Human Resource Management at Thompson Rivers University before transferring, inspired by hands-on analytical work during my HR Analytics Co-op at The Home Depot. I enjoy blending business context with analytical rigour to turn raw data into clear insights.</p>
+        <p class="reveal" style="transition-delay:.36s">If you're looking for someone who can combine analytical thinking with strong communication to bring clarity to complex data — you've found the right person.</p>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
+  <div class="glow-line"></div>
+
+  <!-- TOOLKIT -->
+  <section class="skills-section">
+    <div class="skills-inner">
+      <p class="label reveal">// Toolkit</p>
+      <h2 class="section-h reveal" style="transition-delay:.08s;margin-bottom:.5rem">Tools that help me <em>transform ideas into insight.</em></h2>
+      <div class="chips stagger" style="margin-top:2rem">
+        <span class="chip">SQL</span><span class="chip">Python</span><span class="chip">R</span>
+        <span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">Tableau</span>
+        <span class="chip">Power BI</span><span class="chip">Excel</span><span class="chip">SQLite</span>
+        <span class="chip">JIRA</span><span class="chip">Confluence</span><span class="chip">Process Mapping</span>
+        <span class="chip">KPI Design</span><span class="chip">Dashboarding</span><span class="chip">Agile / Scrum</span>
+        <span class="chip">Data Storytelling</span><span class="chip">Stakeholder Mgmt</span><span class="chip">Gap Analysis</span>
+        <span class="chip">Attrition Modelling</span><span class="chip">BPMN</span><span class="chip">Requirements Gathering</span>
+      </div>
+
+      <!-- What defines me -->
+      <p class="label reveal" style="margin-top:5rem">// What defines me</p>
+      <div class="edu-grid" style="margin-top:1.5rem">
+        <div class="edu-card"><p class="edu-degree">Data-First Thinking</p><p class="edu-school">Evidence over assumption</p><p class="edu-meta" style="color:var(--muted);line-height:1.7;margin-top:.5rem;font-family:var(--sans);font-size:.85rem">Every decision I make is grounded in evidence. I ask "what does the data say?" before anything else — then translate that into language stakeholders can act on.</p></div>
+        <div class="edu-card"><p class="edu-degree">Clear Communication</p><p class="edu-school">Complexity made simple</p><p class="edu-meta" style="color:var(--muted);line-height:1.7;margin-top:.5rem;font-family:var(--sans);font-size:.85rem">I translate complex analyses into plain language that resonates with both technical teams and business leaders. Insight without communication is just noise.</p></div>
+        <div class="edu-card"><p class="edu-degree">Lifelong Learner</p><p class="edu-school">Always expanding</p><p class="edu-meta" style="color:var(--muted);line-height:1.7;margin-top:.5rem;font-family:var(--sans);font-size:.85rem">From self-teaching Python to pursuing an MBA, I'm always expanding my knowledge and adapting to new challenges. Curiosity is my competitive advantage.</p></div>
+        <div class="edu-card"><p class="edu-degree">Cross-Functional View</p><p class="edu-school">Finance · HR · Operations</p><p class="edu-meta" style="color:var(--muted);line-height:1.7;margin-top:.5rem;font-family:var(--sans);font-size:.85rem">Finance roots, HR analytics exposure, and business strategy studies give me a uniquely broad perspective that lets me connect dots others miss.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- EDUCATION -->
   <section class="exp-section">
     <div class="exp-inner">
-      <p class="label reveal">Education</p>
-      <h2 class="section-h reveal" style="transition-delay:.08s">Academic background</h2>
+      <p class="label reveal">// Education</p>
+      <h2 class="section-h reveal" style="transition-delay:.08s;margin-bottom:2rem">Academic <em>background.</em></h2>
       <div class="edu-grid">
-        <div class="edu-card">
-          <p class="edu-degree">MBA — Business Analytics</p>
-          <p class="edu-school">Saint Peter's University, New Jersey, USA</p>
-          <p class="edu-meta">Sep 2024 – May 2026 &nbsp;·&nbsp; GPA 3.8 / 4.0</p>
-        </div>
-        <div class="edu-card">
-          <p class="edu-degree">MBA — Human Resource Management</p>
-          <p class="edu-school">Thompson Rivers University, Canada</p>
-          <p class="edu-meta">May 2021 – Sep 2023 &nbsp;·&nbsp; Programme Transferred</p>
-        </div>
-        <div class="edu-card">
-          <p class="edu-degree">B.Com (Hons) — Finance</p>
-          <p class="edu-school">Mody University — School of Business, India</p>
-          <p class="edu-meta">Aug 2017 – May 2020 &nbsp;·&nbsp; GPA 6.8 / 10.0</p>
-        </div>
+        <div class="edu-card"><p class="edu-degree">MBA — Business Analytics</p><p class="edu-school">Saint Peter's University, New Jersey, USA</p><p class="edu-meta">Sep 2024 – May 2026 · GPA 3.8 / 4.0</p></div>
+        <div class="edu-card"><p class="edu-degree">MBA — Human Resource Management</p><p class="edu-school">Thompson Rivers University, Canada</p><p class="edu-meta">May 2021 – Sep 2023 · Programme Transferred</p></div>
+        <div class="edu-card"><p class="edu-degree">B.Com (Hons) — Finance</p><p class="edu-school">Mody University — School of Business, India</p><p class="edu-meta">Aug 2017 – May 2020 · GPA 6.8 / 10.0</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="contact-bg" aria-hidden="true">Hello</div>
-    <p class="label reveal">Let's Talk</p>
+    <p class="label reveal" style="justify-content:center">// Let's Talk</p>
     <h2 class="contact-h reveal" style="transition-delay:.1s">Open to new<br><em>opportunities.</em></h2>
     <p class="contact-sub reveal" style="transition-delay:.18s">Let's chat about how I can help turn your data into insights.</p>
     <div class="contact-links reveal" style="transition-delay:.26s">
-      <a href="mailto:asisodia@saintpeters.edu" class="btn">✉ Email Me</a>
-      <a href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/" target="_blank" rel="noopener" class="btn outline">LinkedIn ↗</a>
-      <a href="https://github.com/Ayushi-6244" target="_blank" rel="noopener" class="btn outline">GitHub ↗</a>
+      <a href="mailto:asisodia@saintpeters.edu" class="btn btn-primary">✉ Email Me</a>
+      <a href="https://www.linkedin.com/in/ayushi-sisodia-b453651a1/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn ↗</a>
+      <a href="https://github.com/Ayushi-6244" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
     </div>
     <ul class="contact-details reveal" style="transition-delay:.34s">
-      <li><strong style="color:rgba(247,243,237,.7)">Location</strong> &nbsp;Jersey City, NJ (NYC Metro)</li>
-      <li><strong style="color:rgba(247,243,237,.7)">Email</strong> &nbsp;<a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
+      <li>Jersey City, NJ (NYC Metro)</li>
+      <li><a href="mailto:asisodia@saintpeters.edu">asisodia@saintpeters.edu</a></li>
     </ul>
   </section>
+  <footer>© 2026 Ayushi Sisodia · Built with precision.</footer>
 
-  <footer>© 2025 Ayushi Sisodia</footer>
-
-  <script>
-  const dot=document.getElementById('cur-dot'),ring=document.getElementById('cur-ring');
-  let rx=0,ry=0,dx=0,dy=0;
-  document.addEventListener('mousemove',e=>{dx=e.clientX;dy=e.clientY;dot.style.left=dx+'px';dot.style.top=dy+'px';});
-  (function loop(){rx+=(dx-rx)*.13;ry+=(dy-ry)*.13;ring.style.left=Math.round(rx)+'px';ring.style.top=Math.round(ry)+'px';requestAnimationFrame(loop);})();
-  document.querySelectorAll('a,button,.chip,.btn,.edu-card').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-grow'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-grow'));});
-  const nav=document.querySelector('nav'),ham=document.querySelector('.nav-hamburger'),nl=document.querySelector('.nav-links');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-  ham.addEventListener('click',()=>{ham.classList.toggle('open');nl.classList.toggle('open');});
-  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');nl.classList.remove('open');}));
-  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1});
-  document.querySelectorAll('.reveal,.stagger,.tl-item,.proj-card,.proj-img-card,.edu-card').forEach(el=>io.observe(el));
-  </script>
+<script>
+const dot=document.getElementById("cur-dot"),ring=document.getElementById("cur-ring");
+let rx=0,ry=0,dx=0,dy=0;
+document.addEventListener("mousemove",e=>{dx=e.clientX;dy=e.clientY;dot.style.left=dx+"px";dot.style.top=dy+"px";});
+(function loop(){rx+=(dx-rx)*.12;ry+=(dy-ry)*.12;ring.style.left=Math.round(rx)+"px";ring.style.top=Math.round(ry)+"px";requestAnimationFrame(loop);})();
+document.querySelectorAll("a,button,.chip,.btn,.edu-card,.bento-cell").forEach(el=>{el.addEventListener("mouseenter",()=>document.body.classList.add("cursor-grow"));el.addEventListener("mouseleave",()=>document.body.classList.remove("cursor-grow"));});
+const nav=document.getElementById("nav"),ham=document.getElementById("ham"),nl=document.getElementById("navLinks");
+window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",window.scrollY>50));
+ham.addEventListener("click",()=>{ham.classList.toggle("open");nl.classList.toggle("open");});
+nl.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{ham.classList.remove("open");nl.classList.remove("open");}));
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll(".reveal,.stagger,.tl-item,.proj-card,.proj-img-card,.edu-card").forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
